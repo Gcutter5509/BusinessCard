@@ -17,7 +17,7 @@ body{
 }
 .main--article{
     padding:15px;
-    width:25vw;
+    width:min(90%,480px);
     height: fit-content;
     border: 3px solid rgb(84, 76, 111);
     border-radius: 10px;
@@ -34,7 +34,8 @@ body{
 }
 .pfp{
     margin: 0 auto;
-    width: 300px;
+    width: min(70vw,300px);
+    max-width: 100%;
     border-radius: 50%;
 }
 .social--links{
@@ -62,18 +63,23 @@ body{
     position: relative;
     top: 0px;
     margin: 0 auto;
-    width: 4vw;
     border-radius: 50%;
     transform: scale(0.75);
 }
 .github--logo{
-    width: 4vw;
     border-radius: 50%;
     transform: scale(0.75);
 }
+.github--logo, .pinterest--logo{
+    width:clamp(50px,4vw,100px);
+    height:100px;
+    object-fit:contain;
+}
 .tiktok--logo{
     margin: 0;
-    width: 3vw;
+    width: clamp(40px,3vw,85px);
+    height:85px;
+    object-fit:contain;
 }
 .link--tile:hover{
     width: 95%;
@@ -88,7 +94,7 @@ body{
     position: relative;
     left:0px;
     text-align: left;
-    font-size: 1.1vw;
+    font-size: clamp(14px, 1.1vw, 20px);
     color: white;
     opacity: 0;
 }
@@ -116,4 +122,63 @@ body{
     justify-content: flex-start;
     padding-left: 70px;
     border-radius: 50px;
+}
+
+@media (max-width: 600px) {
+
+    .background {
+        padding-top: 30px;
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .main--article {
+        width: 92%;
+        padding: 15px;
+    }
+
+    .pfp {
+        width: 200px;
+    }
+
+    .social--links {
+        height: auto;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .link--tile {
+        height: 60px;
+    }
+
+    .github--logo,
+    .pinterest--logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .tiktok--logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+}
+@media (hover: none) {
+
+    .link--tile:hover {
+        width: 100%;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .link--tile:hover .logo {
+        transform: none;
+    }
+
+    .link--tile:hover .name {
+        opacity: 0;
+    }
 }
