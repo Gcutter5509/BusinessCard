@@ -1,7 +1,16 @@
+@font-face {
+    font-family: 'valvepulp';
+    src: url('valvepulp-bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'valveoracle';
+    src: url('valveoracle-semibold.ttf') format('truetype');
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'valvepulp', sans-serif;
 }
 body{
     margin: 0 auto;
@@ -91,7 +100,7 @@ body{
     transition: transform 0.3s ease;
 }
 .name{
-    font-weight: bold;
+    font-family: 'valveoracle', sans-serif;
     position: relative;
     left:0px;
     text-align: left;
