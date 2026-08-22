@@ -16,6 +16,7 @@ body{
 
 }
 .main--article{
+    background-color: rgb(37, 40, 83);
     padding:15px;
     width:min(90%,480px);
     height: fit-content;
