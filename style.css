@@ -133,7 +133,21 @@ body{
     padding-left: 70px;
     border-radius: 50px;
 }
-
+.background:has(.tiktok:hover), .main--article:has(.tiktok:hover){
+    background-color:rgb(0,0,0);
+}
+.background:has(.pinterest:hover){
+    background-color:rgb(149, 33, 33);
+}
+.main--article:has(.pinterest:hover){
+    background-color:rgb(224,50,50);
+}
+.background:has(.github:hover){
+    background-color:rgb(42, 37, 53);
+}
+.main--article:has(.github:hover){
+    background-color:rgb(66,59,84);
+}
 @media (max-width: 600px) {
 
     .background {
