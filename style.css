@@ -70,11 +70,8 @@ body{
 }
 
 .pinterest--logo{
-    position: relative;
-    top: 0px;
-    margin: 0 auto;
+    margin: 0;
     border-radius: 50%;
-    transform: scale(0.75);
 }
 .github--logo{
     border-radius: 50%;
@@ -107,6 +104,7 @@ body{
     font-size: clamp(14px, 1.1vw, 20px);
     color: white;
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
 .link--tile:hover .name{
     opacity: 1;
@@ -117,7 +115,11 @@ body{
 .pinterest:hover{
     background-color: rgb(224, 50, 50);
     justify-content:flex-start;
+    gap: 8px;
     border-radius: 50px;
+}
+.pinterest:hover .pinterest--logo{
+    transform: translateX(-12px);
 }
 .github:hover{
     background-color: rgb(66, 59, 84);
@@ -129,9 +131,13 @@ body{
 }
 .tiktok:hover{
     background-color: rgb(0, 0, 0);
-    justify-content: flex-start;
-    padding-left: 70px;
+    justify-content: center;
+    padding-left: 0;
+    gap: 8px;
     border-radius: 50px;
+}
+.tiktok:hover .tiktok--logo{
+    transform: none;
 }
 .background:has(.tiktok:hover), .main--article:has(.tiktok:hover){
     background-color:rgb(0,0,0);
