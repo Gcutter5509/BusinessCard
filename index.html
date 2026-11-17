@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card</title>
     <link href="style.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Card</title>
     <script src="main.js" defer></script>
 </head>
 <body>
-    <div class="background">
-        <div class="main--article">
-            <img src="lain.jpg" alt="Profile Picture" class="pfp">
+    <main class="background">
+        <article class="main--article">
+            <img src="lain.jpg" alt="Profile Picture" class="pfp" width="523" height="523">
             <h1 class="text">Мои работы</h1>
-            <div class="social--links">
-                <div class="link--tile pinterest"><img src="pinterest-3.svg" alt="Pinterest" class="logo pinterest--logo"><div class="name"></div></div>
-                <div class="link--tile github"><img src="github-icon-2.svg" alt="GitHub" class="logo github--logo"><div class="name"></div></div>
-                <div class="link--tile tiktok"><img src="tiktok-1.svg" alt="TikTok" class="logo tiktok--logo"><div class="name"></div></div>
-            </div>
-        </div>
-    </div>
+            <nav class="social--links">
+                <a class="link--tile pinterest" href="https://www.pinterest.com/scapegoatcutter/" target="_blank" rel="noopener">
+                    <span class="logo-box"><img src="pinterest-3.svg" alt="" class="logo pinterest--logo"></span>
+                    <span class="name"><span class="service">Pinterest</span> scapegoatcutter</span>
+                </a>
+                <a class="link--tile github" href="https://github.com/Gcutter5509" target="_blank" rel="noopener">
+                    <span class="logo-box"><img src="github-icon-2.svg" alt="" class="logo github--logo"></span>
+                    <span class="name"><span class="service">GitHub</span> Gcutter5509</span>
+                </a>
+                <a class="link--tile tiktok" href="https://www.tiktok.com/@rqqeew" target="_blank" rel="noopener">
+                    <span class="logo-box"><img src="tiktok-1.svg" alt="" class="logo tiktok--logo"></span>
+                    <span class="name"><span class="service">TikTok</span> @rqqeew</span>
+                </a>
+            </nav>
+        </article>
+    </main>
 </body>
 </html>
